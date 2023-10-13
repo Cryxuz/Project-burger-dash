@@ -1,17 +1,24 @@
-import { useSomething } from '../hooks/useSomething.ts'
+import Nav from "./Nav"
+import Intro from "./Intro"
+import Story from "./Story"
+import CarouselPage from "./CarouselPage"
+import Contact from "./Contact"
+// import Booking from "./Booking"
+
+
+
 
 function App() {
-  const { data } = useSomething()
 
   return (
     <>
-      <div className="app">
-        <h1>Fullstack Boilerplate!</h1>
-        <ul>
-          {data &&
-            data.map((something) => <li key={something}>{something}</li>)}
-        </ul>
-      </div>
+    <Nav />
+    {/* <Booking /> */}
+    <Intro />
+    <CarouselPage />
+    <Story />
+    <Contact />
+  
     </>
   )
 }
