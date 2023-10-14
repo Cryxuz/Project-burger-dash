@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Footer from './Footer'
 
 const CarouselPage = () => {
   return (
@@ -11,16 +12,16 @@ const CarouselPage = () => {
       <div className="col-span-3">
         <Carousel>
           <div>
-            <img src="/images/carousel-img-1.jpg" alt="Image 1" />
+            <img src="/images/carousel-img-1.jpg" alt="lobster" />
           </div>
           <div>
-            <img src="/images/carousel-img-3.jpg" alt="Image 2" />
+            <img src="/images/carousel-img-3.jpg" alt="beef" />
           </div>
           <div>
-            <img src="/images/carousel-img-4.jpg" alt="Image 3" />
+            <img src="/images/carousel-img-4.jpg" alt="pan-fried fish" />
           </div>
           <div>
-            <img src="/images/carousel-img-5.jpg" alt="Image 4" />
+            <img src="/images/carousel-img-5.jpg" alt="scallops" />
           </div>
         </Carousel>
       </div>
@@ -52,6 +53,9 @@ const CarouselPage = () => {
             </button>
           </a>
         </div>
+      </div>
+      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
+        <Footer />
       </div>
     </div>
   )

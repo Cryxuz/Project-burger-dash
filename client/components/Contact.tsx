@@ -1,3 +1,5 @@
+import Footer from './Footer'
+
 function Contact() {
   return (
     <div
@@ -58,6 +60,9 @@ function Contact() {
             <p className="text-gray-300">FakeEmail@gmail.com</p>
           </div>
         </div>
+      </div>
+      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
+        <Footer />
       </div>
     </div>
   )

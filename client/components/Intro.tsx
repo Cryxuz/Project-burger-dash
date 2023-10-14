@@ -3,6 +3,7 @@ import home from '/images/home.jpg'
 import eatImage from '/images/carousel-img-2.jpg'
 import drinkImage from '/images/drinks.jpg'
 import visitImage from '/images/visit.jpg'
+import Footer from './Footer'
 
 function Intro() {
   const [bgImage, setBgImage] = useState(home)
@@ -53,6 +54,9 @@ function Intro() {
         >
           Visit
         </div>
+      </div>
+      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
+        <Footer />
       </div>
     </div>
   )

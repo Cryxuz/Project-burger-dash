@@ -19,7 +19,7 @@ function BookingList() {
   const nextWeek = new Date()
   nextWeek.setDate(nextWeek.getDate() + 7)
 
-  const upcomingBookings = bookings.filter((booking) => {
+  const upcomingBookings = bookings.filter((booking: any) => {
     const bookingDate = new Date(booking.date)
     return bookingDate >= currentDate && bookingDate <= nextWeek
   })
@@ -34,8 +34,8 @@ function BookingList() {
           WE CURRENTLY HAVE NO RESERVATIONS BOOKED FOR THE NEXT 7 DAYS
         </h1>
         <p className="text-white text-lg px-16 lg:text-xl lg:w-[40%] mx-auto">
-          For any special inquiries or to discuss private events, please don't
-          hesitate to contact our reservation team.
+          For any special inquiries or to discuss private events, please
+          don&apos;t hesitate to contact our reservation team.
         </p>
       </div>
     )
@@ -59,7 +59,7 @@ function BookingList() {
           </tr>
         </thead>
         <tbody>
-          {upcomingBookings.map((el) => (
+          {upcomingBookings.map((el: any) => (
             <tr
               key={el.id}
               className="border-b border-gray-300 md:text-xl xl:text-2xl"

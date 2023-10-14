@@ -2,6 +2,7 @@ import { useMutation } from '@tanstack/react-query'
 import { addBookings } from '../apis/booking'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 function Booking() {
   const seats = []
@@ -41,12 +42,14 @@ function Booking() {
     date: dates[0],
   })
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = event.target
     setFormData({ ...formData, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     mutation.mutate(formData)
   }
@@ -56,19 +59,18 @@ function Booking() {
       className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
       style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
     >
-      <div className="bg-slate-800 bg-opacity-80 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">
+      <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">
         <form onSubmit={handleSubmit} method="post" className="text-center">
           {' '}
           <label className="block mb-2 text-left">
             Name
             <input
-              placeholder="Enter Name"
               required
               type="text"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="block w-full border p-2 bg-gray-500 rounded-md bg-opacity-50"
+              className="block w-full border p-2 bg-gray-500 bg-opacity-50 rounded-md"
             />
           </label>
           <label className="block mb-2 text-left">
@@ -116,16 +118,19 @@ function Booking() {
               ))}
             </select>
           </label>
-          <button className="bg-slate-500 bg-opacity-70 text-white p-2 rounded-lg hover:bg-slate-400 m-[3%] border-[2px]">
+          <button className="bg-gray-700 text-white p-2 rounded-lg hover:bg-blue-600 m-[3%] border-[2px]">
             Submit
           </button>
         </form>
       </div>
       <Link to="/booking-list">
-        <button className="bg-slate-500 bg-opacity-70 text-white py-2 px-4 rounded-lg hover:bg-slate-400 border-[2px]">
+        <button className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-blue-600 border-[2px]">
           View Reservation List
         </button>
       </Link>
+      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
+        <Footer />
+      </div>
     </div>
   )
 }
