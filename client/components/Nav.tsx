@@ -1,52 +1,52 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const navLinks = [
   {
-    title: "Home",
-    link: "/"
+    title: 'Home',
+    link: '/',
   },
   {
-    title: "Menu",
-    link: "#menu"
+    title: 'Menu',
+    link: '/menu',
   },
   {
-    title: "Booking",
-    link: "/booking"
+    title: 'Booking',
+    link: '/booking',
   },
   {
-    title: "Story",
-    link: "#story"
+    title: 'Story',
+    link: '/story',
   },
   {
-    title: "Contact",
-    link: "/contact"
+    title: 'Contact',
+    link: '/contact',
   },
-];
+]
 
 function Nav() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const handleMenu = () => {
-    setOpen((prev) => !prev);
-  };
+    setOpen((prev) => !prev)
+  }
 
   return (
     <div className="fixed w-full bg-inherit">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between md:justify-center h-16">
-          
           {/* Nav links */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   className="text-white transition-all duration-500 hover:underline hover:text-gray-300 px-3 py-2 rounded-md font-medium text-2xl"
                   key={index}
-                  href={link.link}
+                  to={link.link}
                 >
                   {link.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -68,19 +68,19 @@ function Nav() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 className="text-gray-300 hover:bg-gray-500 hover:bg-opacity-30 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 key={index}
-                href={link.link}
+                to={link.link}
               >
                 {link.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       ) : null}
     </div>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

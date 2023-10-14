@@ -1,12 +1,13 @@
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+/* eslint-disable react/no-unescaped-entities */
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const CarouselPage = () => {
   return (
-    
-    <div className="h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30" style={{ backgroundImage: 'url("/images/grill.jpg")' }}>
-      
+    <div
+      className="h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30"
+      style={{ backgroundImage: 'url("/images/grill.jpg")' }}
+    >
       <div className="col-span-3">
         <Carousel>
           <div>
@@ -24,15 +25,28 @@ const CarouselPage = () => {
         </Carousel>
       </div>
       <div className="col-span-2 p-4 flex flex-col justify-between items-center bg-gray-500 bg-opacity-40 rounded-lg">
-        <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">Explore Our Delicious cursive</p>
-        <p className=' xl:text-2xl text-center my-5 md:my-5 text-md text-white '>"Laughter is brightest in the place where the food is." – Irish Proverb</p>
+        <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
+          Explore Our Delicious cursive
+        </p>
+        <p className=" xl:text-2xl text-center my-5 md:my-5 text-md text-white ">
+          "Laughter is brightest in the place where the food is." – Irish
+          Proverb
+        </p>
         <div className="flex justify-center items-center gap-2">
-         <a href="https://drive.google.com/file/d/1udEgTBX8DTwrRAVZO0WDeOr6B3maqEp6/view?usp=sharing" target='_blank'> 
-          <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
+          <a
+            href="https://drive.google.com/file/d/1udEgTBX8DTwrRAVZO0WDeOr6B3maqEp6/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
               View Our Full Menu
             </button>
           </a>
-          <a href="https://drive.google.com/file/d/1-VB9VcbXRPX_TgRzHnNU3xdw8VeNjOd4/view?usp=sharing" target='_blank'>
+          <a
+            href="https://drive.google.com/file/d/1-VB9VcbXRPX_TgRzHnNU3xdw8VeNjOd4/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
               View Our Drinks
             </button>
@@ -40,7 +54,7 @@ const CarouselPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default CarouselPage
