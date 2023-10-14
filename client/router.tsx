@@ -14,7 +14,7 @@ export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Intro />} />
     <Route path="/menu" element={<CarouselPage />} />
-    <Route path="/booking" element={<Booking />} />
+    <Route path="/bookings" element={<Booking />} />
     <Route path="/story" element={<Story />} />
     <Route path="/contact" element={<Contact />} />
     {/* <Route path="/booking-list" element={<BookingList />} /> */}

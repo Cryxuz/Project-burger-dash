@@ -6,7 +6,6 @@ const server = express()
 
 server.use(express.json())
 
-// Change this
 server.use('/api/v1/bookings', bookings)
 
 if (process.env.NODE_ENV === 'production') {

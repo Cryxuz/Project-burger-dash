@@ -1,3 +1,7 @@
+import { useMutation } from '@tanstack/react-query'
+import { addBookings } from '../apis/booking'
+import { useState } from 'react'
+
 function Booking() {
   const seats = []
   for (let i = 2; i <= 10; i++) {
@@ -27,17 +31,49 @@ function Booking() {
     dates.push(nextDate.toDateString())
   }
 
+  const mutation = useMutation((formData) => addBookings(formData))
+
+  const [formData, setFormData] = useState({
+    name: '',
+    seats: seats[0],
+    time: time[0],
+    date: dates[0],
+  })
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    mutation.mutate(formData)
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-500">
       <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <form>
-          <label className="block mb-2">
+        <form onSubmit={handleSubmit} method="post" className="text-center">
+          {' '}
+          <label className="block mb-2 text-left">
             Name
-            <input type="text" className="block w-full border p-2" />
+            <input
+              required
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="block w-full border p-2"
+            />
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-left">
             Seats
-            <select className="block w-full border p-2">
+            <select
+              name="seats"
+              value={formData.seats}
+              onChange={handleInputChange}
+              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+            >
               {seats.map((seat, index) => (
                 <option key={index} value={seat}>
                   {seat}
@@ -45,9 +81,14 @@ function Booking() {
               ))}
             </select>
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-left">
             Time
-            <select className="block w-full border p-2">
+            <select
+              name="time"
+              value={formData.time}
+              onChange={handleInputChange}
+              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+            >
               {time.map((slot, index) => (
                 <option key={index} value={slot}>
                   {slot}
@@ -55,9 +96,14 @@ function Booking() {
               ))}
             </select>
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-left">
             Date
-            <select className="block w-full border p-2">
+            <select
+              name="date"
+              value={formData.date}
+              onChange={handleInputChange}
+              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+            >
               {dates.map((date, index) => (
                 <option key={index} value={date}>
                   {date}
@@ -73,5 +119,4 @@ function Booking() {
     </div>
   )
 }
-
 export default Booking

@@ -13,7 +13,7 @@ const navLinks = [
   },
   {
     title: 'Booking',
-    link: '/booking',
+    link: '/bookings',
   },
   {
     title: 'Story',
