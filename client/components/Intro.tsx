@@ -4,6 +4,7 @@ import eatImage from '/images/carousel-img-2.jpg'
 import drinkImage from '/images/drinks.jpg'
 import visitImage from '/images/visit.jpg'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 function Intro() {
   const [bgImage, setBgImage] = useState(home)
@@ -38,21 +39,23 @@ function Intro() {
           onMouseEnter={handleEatHover}
           onMouseLeave={() => setBgImage(home)}
         >
-          Eat
+          <Link to="/menu">Eat</Link>
         </div>
+
         <div
           className="text-3xl  md:text-6xl hover:underline py-[2%] px-[5%]"
           onMouseEnter={handleDrinkHover}
           onMouseLeave={() => setBgImage(home)}
         >
-          Drink
+          <Link to="/menu">Drink</Link>
         </div>
+
         <div
           className="text-3xl  md:text-6xl hover:underline py-[2%] px-[5%]"
           onMouseEnter={handleVisitHover}
           onMouseLeave={() => setBgImage(home)}
         >
-          Visit
+          <Link to="/contact">Visit</Link>
         </div>
       </div>
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
