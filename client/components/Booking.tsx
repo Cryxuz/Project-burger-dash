@@ -118,13 +118,13 @@ function Booking() {
               ))}
             </select>
           </label>
-          <button className="bg-gray-700 text-white p-2 rounded-lg hover:bg-blue-600 m-[3%] border-[2px]">
+          <button className="bg-gray-700 text-white p-2 rounded-lg hover:bg-slate-400 m-[3%] border-[2px]">
             Submit
           </button>
         </form>
       </div>
       <Link to="/booking-list">
-        <button className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-blue-600 border-[2px]">
+        <button className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-slate-400 border-[2px]">
           View Reservation List
         </button>
       </Link>
