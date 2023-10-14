@@ -52,8 +52,11 @@ function Booking() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-500 gap-5">
-      <div className="bg-white p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] ">
+    <div
+      className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
+      style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
+    >
+      <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">
         <form onSubmit={handleSubmit} method="post" className="text-center">
           {' '}
           <label className="block mb-2 text-left">
@@ -64,7 +67,7 @@ function Booking() {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="block w-full border p-2"
+              className="block w-full border p-2 bg-gray-500 rounded-md bg-opacity-50"
             />
           </label>
           <label className="block mb-2 text-left">
@@ -73,7 +76,7 @@ function Booking() {
               name="seats"
               value={formData.seats}
               onChange={handleInputChange}
-              className="md:block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+              className="bg-gray-500 bg-opacity-50 md:block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
             >
               {seats.map((seat, index) => (
                 <option key={index} value={seat}>
@@ -88,7 +91,7 @@ function Booking() {
               name="time"
               value={formData.time}
               onChange={handleInputChange}
-              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+              className=" bg-gray-500 bg-opacity-50 block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
             >
               {time.map((slot, index) => (
                 <option key={index} value={slot}>
@@ -103,7 +106,7 @@ function Booking() {
               name="date"
               value={formData.date}
               onChange={handleInputChange}
-              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+              className=" bg-gray-500 bg-opacity-50 block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
             >
               {dates.map((date, index) => (
                 <option key={index} value={date}>
@@ -112,13 +115,13 @@ function Booking() {
               ))}
             </select>
           </label>
-          <button className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">
+          <button className="bg-gray-700 text-white p-2 rounded-lg hover:bg-blue-600 m-[3%] border-[2px]">
             Submit
           </button>
         </form>
       </div>
       <Link to="/booking-list">
-        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+        <button className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-blue-600 border-[2px]">
           View Reservation List
         </button>
       </Link>
