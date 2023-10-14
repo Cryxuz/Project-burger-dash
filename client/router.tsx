@@ -9,6 +9,7 @@ import Story from './components/Story'
 import Contact from './components/Contact'
 import CarouselPage from './components/CarouselPage'
 import Booking from './components/Booking'
+import BookingList from './components/BookingList'
 
 export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
@@ -17,7 +18,7 @@ export const routes = createRoutesFromElements(
     <Route path="/bookings" element={<Booking />} />
     <Route path="/story" element={<Story />} />
     <Route path="/contact" element={<Contact />} />
-    {/* <Route path="/booking-list" element={<BookingList />} /> */}
+    <Route path="/booking-list" element={<BookingList />} />
   </Route>,
 )
 

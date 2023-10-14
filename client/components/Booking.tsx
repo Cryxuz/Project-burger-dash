@@ -1,6 +1,7 @@
 import { useMutation } from '@tanstack/react-query'
 import { addBookings } from '../apis/booking'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Booking() {
   const seats = []
@@ -51,8 +52,8 @@ function Booking() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-500">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-500 gap-5">
+      <div className="bg-white p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] ">
         <form onSubmit={handleSubmit} method="post" className="text-center">
           {' '}
           <label className="block mb-2 text-left">
@@ -72,7 +73,7 @@ function Booking() {
               name="seats"
               value={formData.seats}
               onChange={handleInputChange}
-              className="block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
+              className="md:block w-full border p-2 appearance-none focus:outline-none focus:shadow-outline-blue focus:border-blue-300 rounded-md"
             >
               {seats.map((seat, index) => (
                 <option key={index} value={seat}>
@@ -116,6 +117,11 @@ function Booking() {
           </button>
         </form>
       </div>
+      <Link to="/booking-list">
+        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+          View Reservation List
+        </button>
+      </Link>
     </div>
   )
 }
