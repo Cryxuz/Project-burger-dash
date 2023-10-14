@@ -26,10 +26,17 @@ function BookingList() {
 
   if (upcomingBookings.length === 0) {
     return (
-      <div className="pt-20 text-center">
-        <h1 className="text-2xl text-white">
-          NO RESERVATIONS BOOKED FOR THE NEXT 7 DAYS
+      <div
+        className="pt-20 text-center  bg-cover h-screen"
+        style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
+      >
+        <h1 className="text-2xl text-white p-20 md:text-4xl lg:text-5xl mx-auto xl:w-[50%] xl:text-6xl">
+          WE CURRENTLY HAVE NO RESERVATIONS BOOKED FOR THE NEXT 7 DAYS
         </h1>
+        <p className="text-white text-lg px-16 lg:text-xl lg:w-[40%] mx-auto">
+          For any special inquiries or to discuss private events, please don't
+          hesitate to contact our reservation team.
+        </p>
       </div>
     )
   }

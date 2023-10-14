@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import home from '/images/home.jpg';
-import eatImage from '/images/carousel-img-2.jpg';
-import drinkImage from '/images/drinks.jpg';
-import visitImage from '/images/visit.jpg';
+import { useState } from 'react'
+import home from '/images/home.jpg'
+import eatImage from '/images/carousel-img-2.jpg'
+import drinkImage from '/images/drinks.jpg'
+import visitImage from '/images/visit.jpg'
 
 function Intro() {
-  const [bgImage, setBgImage] = useState(home);
+  const [bgImage, setBgImage] = useState(home)
 
   const handleEatHover = () => {
-    setBgImage(eatImage);
-  };
+    setBgImage(eatImage)
+  }
 
   const handleDrinkHover = () => {
-    setBgImage(drinkImage);
-  };
+    setBgImage(drinkImage)
+  }
 
   const handleVisitHover = () => {
-    setBgImage(visitImage);
-  };
+    setBgImage(visitImage)
+  }
 
   return (
     <div
@@ -25,7 +25,7 @@ function Intro() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="pt-[50%] md:mb-[5%] md:pt-[0%] text-center text-white">
-        <h1 className="cursive text-7xl md:text-9xl ">Ember</h1>
+        <h1 className="cursive text-7xl md:text-9xl ">Ember Bistro</h1>
         <p className="pt-[10%] md:pt-0 cursive text-3xl md:text-5xl">
           Where Culinary Artistry Meets Timeless Flavours
         </p>
@@ -55,7 +55,7 @@ function Intro() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Intro;
+export default Intro
