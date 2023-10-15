@@ -9,3 +9,7 @@
 .cursive {
   font-family: 'Allura', cursive;
 }
+
+body {
+  background-color: gray;
+}
