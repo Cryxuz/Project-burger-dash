@@ -129,8 +129,8 @@ function Booking() {
         </button>
       </Link>
       <p className="text-white text-center px-2 lg:text-lg">
-        Reservation list is not available because Netlify does not provide free
-        database hosting.
+        Unfortunately, reservation list is not available because Netlify does
+        not provide free database hosting.
       </p>
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
