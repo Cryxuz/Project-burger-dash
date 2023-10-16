@@ -23,12 +23,9 @@ function Intro() {
   }
 
   useEffect(() => {
-    // Use a timeout to delay the visibility change, allowing the fade-in effect
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 500)
-
-    // Clear the timer on component unmount to avoid memory leaks
     return () => clearTimeout(timer)
   }, [])
 
