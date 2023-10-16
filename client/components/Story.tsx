@@ -4,7 +4,7 @@ function Story() {
   return (
     <div
       className="xl:flex h-screen px-[10%] py-[5%] gap-[5%] bg-cover justify-center items-center pt-[15%] xl:pt-[5%]"
-      style={{ backgroundImage: 'url("/images/ember.jpg")' }}
+      style={{ backgroundImage: 'url("/images/ember.webp")' }}
     >
       <div className="text-center items-center justify-center">
         <ul className="text-white hidden xl:block pt-[5%]">
@@ -28,7 +28,7 @@ function Story() {
         </ul>
       </div>
       <img
-        src="/images/story.jpg"
+        src="/images/story.webp"
         alt="ai chef"
         className="rounded-xl w-full md:w-[50%] md:h-auto mx-auto "
       />

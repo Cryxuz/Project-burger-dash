@@ -28,7 +28,7 @@ function BookingList() {
     return (
       <div
         className="pt-20 text-center  bg-cover h-screen"
-        style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
+        style={{ backgroundImage: 'url("/images/reserved.webp")' }}
       >
         <h1 className="text-2xl text-white p-20 md:text-4xl lg:text-5xl mx-auto xl:w-[50%] xl:text-6xl">
           WE CURRENTLY HAVE NO RESERVATIONS BOOKED FOR THE NEXT 7 DAYS

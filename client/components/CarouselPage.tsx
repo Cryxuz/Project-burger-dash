@@ -7,21 +7,21 @@ const CarouselPage = () => {
   return (
     <div
       className="h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30"
-      style={{ backgroundImage: 'url("/images/grill.jpg")' }}
+      style={{ backgroundImage: 'url("/images/grill.webp")' }}
     >
       <div className="col-span-3">
         <Carousel>
           <div>
-            <img src="/images/carousel-img-1.jpg" alt="lobster" />
+            <img src="/images/carousel-img-1.webp" alt="lobster" />
           </div>
           <div>
-            <img src="/images/carousel-img-3.jpg" alt="beef" />
+            <img src="/images/carousel-img-3.webp" alt="beef" />
           </div>
           <div>
-            <img src="/images/carousel-img-4.jpg" alt="pan-fried fish" />
+            <img src="/images/carousel-img-4.webp" alt="pan-fried fish" />
           </div>
           <div>
-            <img src="/images/carousel-img-5.jpg" alt="scallops" />
+            <img src="/images/carousel-img-5.webp" alt="scallops" />
           </div>
         </Carousel>
       </div>

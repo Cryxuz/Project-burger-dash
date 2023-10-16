@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import home from '/images/home.jpg'
-import eatImage from '/images/carousel-img-2.jpg'
-import drinkImage from '/images/drinks.jpg'
-import visitImage from '/images/visit.jpg'
+import home from '/images/home.webp'
+import eatImage from '/images/carousel-img-2.webp'
+import drinkImage from '/images/drinks.webp'
+import visitImage from '/images/visit.webp'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 

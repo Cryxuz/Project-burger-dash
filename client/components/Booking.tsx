@@ -57,7 +57,7 @@ function Booking() {
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
-      style={{ backgroundImage: 'url("/images/reserve-min.jpg")' }}
+      style={{ backgroundImage: 'url("/images/reserved.webp")' }}
     >
       <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">
         <form onSubmit={handleSubmit} method="post" className="text-center">
