@@ -1,8 +1,19 @@
 import Footer from './Footer'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 function Story() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
       className="xl:flex h-screen px-[10%] py-[5%] gap-[5%] bg-cover justify-center items-center pt-[15%] xl:pt-[5%]"
       style={{ backgroundImage: 'url("/images/ember.webp")' }}
     >
@@ -43,7 +54,7 @@ function Story() {
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

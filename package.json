@@ -28,6 +28,7 @@
   "dependencies": {
     "blurhash": "^2.0.5",
     "express": "^4.17.2",
+    "framer-motion": "^10.16.4",
     "knex": "^2.5.1",
     "react-blurhash": "^0.3.0",
     "react-icons": "^4.11.0",

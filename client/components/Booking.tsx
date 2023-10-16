@@ -1,10 +1,16 @@
 import { useMutation } from '@tanstack/react-query'
 import { addBookings } from '../apis/booking'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import { motion } from 'framer-motion'
 
 function Booking() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   const seats = []
   for (let i = 2; i <= 10; i++) {
     seats.push(i)
@@ -55,7 +61,11 @@ function Booking() {
   }
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.5 }}
       className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
       style={{ backgroundImage: 'url("/images/reserved.webp")' }}
     >
@@ -135,7 +145,7 @@ function Booking() {
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   )
 }
 export default Booking
