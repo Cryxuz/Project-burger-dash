@@ -16,7 +16,7 @@ const CarouselPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2.5 }}
       className="h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30"
       style={{ backgroundImage: 'url("/images/grill.webp")' }}
     >

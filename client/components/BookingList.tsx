@@ -53,7 +53,7 @@ function BookingList() {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2.5 }}
       className="overflow-x-auto pt-20 bg-cover h-screen text-white"
       style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
     >

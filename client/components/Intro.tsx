@@ -6,6 +6,7 @@ import visitImage from '/images/visit.webp'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+
 function Intro() {
   const [bgImage, setBgImage] = useState(home)
   const [isVisible, setIsVisible] = useState(false)
@@ -31,7 +32,7 @@ function Intro() {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2.5 }}
       className="w-screen h-screen overflow-hidden bg-cover bg-no-repeat bg-center  p-[15%] items-center transition-all duration-700  "
       style={{ backgroundImage: `url(${bgImage})` }}
     >

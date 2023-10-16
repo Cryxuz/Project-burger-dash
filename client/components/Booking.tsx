@@ -65,7 +65,7 @@ function Booking() {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2.5 }}
       className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
       style={{ backgroundImage: 'url("/images/reserved.webp")' }}
     >

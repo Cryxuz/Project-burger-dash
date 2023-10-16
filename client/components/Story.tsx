@@ -13,7 +13,7 @@ function Story() {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2.5 }}
       className="xl:flex h-screen px-[10%] py-[5%] gap-[5%] bg-cover justify-center items-center pt-[15%] xl:pt-[5%]"
       style={{ backgroundImage: 'url("/images/ember.webp")' }}
     >
