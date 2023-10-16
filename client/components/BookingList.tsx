@@ -1,7 +1,19 @@
 import { useQuery } from '@tanstack/react-query'
 import { getBookingList } from '../apis/booking'
+import { useState, useEffect } from 'react'
 
 function BookingList() {
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    // Use a timeout to delay the visibility change, allowing the fade-in effect
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+
+    // Clear the timer on component unmount to avoid memory leaks
+    return () => clearTimeout(timer)
+  }, [])
+
   const {
     data: bookings,
     isLoading,
@@ -43,7 +55,9 @@ function BookingList() {
 
   return (
     <div
-      className="overflow-x-auto pt-20 bg-cover h-screen text-white"
+      className={`overflow-x-auto pt-20 bg-cover h-screen text-white ${
+        isVisible ? 'opacity-100' : 'opacity-30'
+      }`}
       style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
     >
       <h2 className="text-white text-center text-lg md:text-2xl lg:text-4xl p-4 cursive">

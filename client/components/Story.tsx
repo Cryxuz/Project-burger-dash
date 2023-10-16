@@ -1,9 +1,20 @@
+import { useState, useEffect } from 'react'
 import Footer from './Footer'
 
 function Story() {
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div
-      className="xl:flex h-screen px-[10%] py-[5%] gap-[5%] bg-cover justify-center items-center pt-[15%] xl:pt-[5%]"
+      className={`xl:flex h-screen px-[10%] py-[5%] gap-[5%] bg-cover justify-center items-center pt-[15%] xl:pt-[5%] ${
+        isVisible ? 'opacity-100' : 'opacity-30'
+      }`}
       style={{ backgroundImage: 'url("/images/ember.webp")' }}
     >
       <div className="text-center items-center justify-center">

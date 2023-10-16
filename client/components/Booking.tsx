@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { addBookings } from '../apis/booking'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
@@ -54,9 +54,22 @@ function Booking() {
     mutation.mutate(formData)
   }
 
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    // Use a timeout to delay the visibility change, allowing the fade-in effect
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+
+    // Clear the timer on component unmount to avoid memory leaks
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center bg-cover gap-5"
+      className={`min-h-screen flex flex-col items-center justify-center bg-cover gap-5 ${
+        isVisible ? 'opacity-100' : 'opacity-30'
+      }`}
       style={{ backgroundImage: 'url("/images/reserved.webp")' }}
     >
       <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">

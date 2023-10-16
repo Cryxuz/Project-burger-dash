@@ -1,9 +1,20 @@
+import { useState, useEffect } from 'react'
 import Footer from './Footer'
 
 function Contact() {
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div
-      className="bg-cover py-[5%] min-h-screen"
+      className={`bg-cover py-[5%] min-h-screen ${
+        isVisible ? 'opacity-100' : 'opacity-30'
+      }`}
       style={{ backgroundImage: 'url("/images/table-setting.webp")' }}
     >
       <div className="w-[90%] md:w-[50%] bg-slate-800 p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 ">
