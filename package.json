@@ -26,8 +26,10 @@
     ]
   },
   "dependencies": {
+    "blurhash": "^2.0.5",
     "express": "^4.17.2",
     "knex": "^2.5.1",
+    "react-blurhash": "^0.3.0",
     "react-icons": "^4.11.0",
     "react-responsive-carousel": "^3.2.23",
     "sqlite3": "^5.1.6",
