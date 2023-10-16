@@ -2,21 +2,10 @@
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Footer from './Footer'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 const CarouselPage = () => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 2.5 }}
+    <div
       className="h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30"
       style={{ backgroundImage: 'url("/images/grill.webp")' }}
     >
@@ -68,7 +57,7 @@ const CarouselPage = () => {
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
       </div>
-    </motion.div>
+    </div>
   )
 }
 

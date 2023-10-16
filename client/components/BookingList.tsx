@@ -1,14 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getBookingList } from '../apis/booking'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 function BookingList() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
   const {
     data: bookings,
     isLoading,
@@ -49,11 +42,7 @@ function BookingList() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 2.5 }}
+    <div
       className="overflow-x-auto pt-20 bg-cover h-screen text-white"
       style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
     >
@@ -83,7 +72,7 @@ function BookingList() {
           ))}
         </tbody>
       </table>
-    </motion.div>
+    </div>
   )
 }
 

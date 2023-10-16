@@ -1,19 +1,8 @@
 import Footer from './Footer'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 function Contact() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 2.5 }}
+    <div
       className="bg-cover py-[5%] min-h-screen"
       style={{ backgroundImage: 'url("/images/table-setting.webp")' }}
     >
@@ -75,7 +64,7 @@ function Contact() {
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
       </div>
-    </motion.div>
+    </div>
   )
 }
 export default Contact
