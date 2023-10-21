@@ -67,14 +67,15 @@ function Booking() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col items-center justify-center bg-cover gap-5 ${
-        isVisible ? 'opacity-100' : 'opacity-30'
-      }`}
-      style={{ backgroundImage: 'url("/images/reserved.webp")' }}
+      className={`min-h-screen lg:grid lg:grid-cols-2 items-center justify-center bg-cover pt-[15%] lg:pt-0`}
     >
-      <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[30%] text-white">
+      <img
+        className="mx-auto hidden lg:block"
+        src="/images/bg-burger.png"
+        alt=""
+      />
+      <div className="bg-gray-500 bg-opacity-50 p-8 rounded-lg shadow-md w-[280px] sm:w-[360px] lg:w-[80%] text-white mx-auto lg:mx-0">
         <form onSubmit={handleSubmit} method="post" className="text-center">
-          {' '}
           <label className="block mb-2 text-left">
             Name
             <input
@@ -131,24 +132,28 @@ function Booking() {
               ))}
             </select>
           </label>
-          <button className="bg-gray-700 text-white p-2 rounded-lg hover:bg-slate-400 m-[3%] border-[2px]">
+          <button className="bg-gray-700 text-white p-2 rounded-lg hover-bg-slate-400 m-[3%] border-[2px]">
             Submit
           </button>
         </form>
+        <div className="text-center">
+          <Link to="/booking-list">
+            <button className="bg-gray-700 m-5 text-white py-2 px-4 rounded-lg hover-bg-slate-400 border-[2px]">
+              View Reservation List
+            </button>
+          </Link>
+          <p className="text-white text-center px-2 lg:text-lg">
+            Unfortunately, the reservation list is not available because Netlify
+            does not provide free database hosting.
+          </p>
+        </div>
       </div>
-      <Link to="/booking-list">
-        <button className="bg-gray-700 text-white py-2 px-4 rounded-lg hover:bg-slate-400 border-[2px]">
-          View Reservation List
-        </button>
-      </Link>
-      <p className="text-white text-center px-2 lg:text-lg">
-        Unfortunately, reservation list is not available because Netlify does
-        not provide free database hosting.
-      </p>
+
       <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
         <Footer />
       </div>
     </div>
   )
 }
+
 export default Booking
