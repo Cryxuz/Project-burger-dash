@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 function Story() {
   return (
     <div className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] `}>
