@@ -8,13 +8,13 @@ import Contact from './Contact'
 
 function App() {
   return (
-    <>
+    <div className="bg-gradient-to-r from-slate-400 via-neutral-400 to-slate-800">
       <Nav />
       <Intro />
       <Story />
       <CarouselPage />
       <Contact />
-    </>
+    </div>
   )
 }
 

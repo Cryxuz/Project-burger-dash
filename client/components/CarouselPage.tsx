@@ -2,41 +2,37 @@
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Footer from './Footer'
-import { useState, useEffect } from 'react'
 
 const CarouselPage = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <div
-      className={`h-screen block md:grid grid-cols-5 gap-[5%] justify-center items-center p-[5%] bg-cover bg-opacity-30 ${
-        isVisible ? 'opacity-100' : 'opacity-30'
-      }`}
-      style={{ backgroundImage: 'url("/images/grill.webp")' }}
-    >
-      <div className="col-span-3">
+    <div className={`h-screen w-[60%] lg:flex m-auto gap-[20%] items-center`}>
+      <div className="">
         <Carousel>
           <div>
-            <img src="/images/carousel-img-1.webp" alt="lobster" />
+            <img className="" src="/images/burger-1.png" alt="chicken burger" />
           </div>
           <div>
-            <img src="/images/carousel-img-3.webp" alt="beef" />
+            <img
+              className=""
+              src="/images/burger-2.png"
+              alt="bacon and cheese beef burger"
+            />
           </div>
           <div>
-            <img src="/images/carousel-img-4.webp" alt="pan-fried fish" />
+            <img
+              src="/images/burger-3.png"
+              alt="beef burger with onion rings"
+            />
           </div>
           <div>
-            <img src="/images/carousel-img-5.webp" alt="scallops" />
+            <img src="/images/burger-4.png" alt="triple cheese burger" />
+          </div>
+          <div>
+            <img src="/images/burger-5.png" alt="beef burger combo" />
           </div>
         </Carousel>
       </div>
-      <div className="col-span-2 p-4 flex flex-col justify-between items-center bg-gray-500 bg-opacity-40 rounded-lg">
+      <div className="">
         <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
           Explore Our Delicious Cuisine
         </p>
@@ -50,23 +46,11 @@ const CarouselPage = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
+            <button className="bg-slate-300 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
               View Our Full Menu
             </button>
           </a>
-          <a
-            href="https://drive.google.com/file/d/1-VB9VcbXRPX_TgRzHnNU3xdw8VeNjOd4/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
-              View Our Drinks
-            </button>
-          </a>
         </div>
-      </div>
-      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
-        <Footer />
       </div>
     </div>
   )
