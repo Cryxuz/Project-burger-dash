@@ -6,15 +6,11 @@ import CarouselPage from './CarouselPage'
 import Story from './Story'
 import Contact from './Contact'
 import Footer from './Footer'
-import Booking from './Booking'
-import BookingList from './BookingList'
 
 function App() {
   return (
     <div className="bg-gradient-to-r from-slate-400 via-neutral-400 to-slate-800">
       <Nav />
-      <Booking />
-      <BookingList />
       <Intro />
       <Story />
       <CarouselPage />
