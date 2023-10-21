@@ -1,11 +1,30 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import Footer from './Footer'
 
 const CarouselPage = () => {
   return (
-    <div className={`h-screen w-[60%] lg:flex m-auto gap-[20%] items-center`}>
+    <div className={`pt-[5%] w-[60%] lg:flex m-auto gap-[20%] items-center`}>
+      <div className="">
+        <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
+          Explore Our Delicious Cuisine
+        </p>
+        <p className=" xl:text-2xl text-center my-5 md:my-5 text-md text-white ">
+          "Laughter is brightest in the place where the food is." – Irish
+          Proverb
+        </p>
+        <div className="flex justify-center items-center gap-2">
+          <a
+            href="https://drive.google.com/file/d/1udEgTBX8DTwrRAVZO0WDeOr6B3maqEp6/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-600 text-slate-50 rounded-xl p-3 ">
+              View Our Full Menu
+            </button>
+          </a>
+        </div>
+      </div>
       <div className="">
         <Carousel>
           <div>
@@ -31,26 +50,6 @@ const CarouselPage = () => {
             <img src="/images/burger-5.png" alt="beef burger combo" />
           </div>
         </Carousel>
-      </div>
-      <div className="">
-        <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
-          Explore Our Delicious Cuisine
-        </p>
-        <p className=" xl:text-2xl text-center my-5 md:my-5 text-md text-white ">
-          "Laughter is brightest in the place where the food is." – Irish
-          Proverb
-        </p>
-        <div className="flex justify-center items-center gap-2">
-          <a
-            href="https://drive.google.com/file/d/1udEgTBX8DTwrRAVZO0WDeOr6B3maqEp6/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="bg-slate-300 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-xl p-3 ">
-              View Our Full Menu
-            </button>
-          </a>
-        </div>
       </div>
     </div>
   )

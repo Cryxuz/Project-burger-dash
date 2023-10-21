@@ -5,6 +5,7 @@ import Intro from './Intro'
 import CarouselPage from './CarouselPage'
 import Story from './Story'
 import Contact from './Contact'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Story />
       <CarouselPage />
       <Contact />
+      <Footer />
     </div>
   )
 }

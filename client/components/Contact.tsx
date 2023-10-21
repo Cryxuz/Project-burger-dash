@@ -1,23 +1,9 @@
-import { useState, useEffect } from 'react'
 import Footer from './Footer'
 
 function Contact() {
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <div
-      className={`bg-cover py-[5%] min-h-screen ${
-        isVisible ? 'opacity-100' : 'opacity-30'
-      }`}
-      style={{ backgroundImage: 'url("/images/table-setting.webp")' }}
-    >
-      <div className="w-[90%] md:w-[50%] bg-slate-800 p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 ">
+    <div className={` py-[5%]  `}>
+      <div className="w-[90%] md:w-[50%] p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 ">
         <h2 className="text-white text-2xl md:text-3xl ">Contact Us</h2>
         <br />
         <p className="text-white">
@@ -27,26 +13,32 @@ function Contact() {
         </p>
         <br />
         <form className="flex flex-col space-y-4" action="">
+          <label className="text-white" htmlFor="name">
+            Name:
+          </label>
           <input
-            className="px-4 py-2 rounded border bg-gray-500 bg-opacity-50 "
+            className="px-4 py-2 rounded border bg-slate-500 bg-opacity-0 "
             type="text"
-            placeholder="Enter Name"
           />
+          <label className="text-white" htmlFor="email">
+            Email:
+          </label>
           <input
-            className="px-4 py-2 rounded border bg-gray-500 bg-opacity-50 "
+            className="px-4 py-2 rounded border bg-slate-500 bg-opacity-0 "
             type="email"
-            placeholder="Enter Email"
           />
+          <label className="text-white" htmlFor="phone number">
+            Phone Number (Optional):
+          </label>
           <input
-            className="px-4 py-2 rounded border bg-gray-500 bg-opacity-50 "
+            className="px-4 py-2 rounded border bg-slate-500 bg-opacity-0 "
             type="tel"
-            placeholder="Enter Phone Number"
           />
-          <textarea
-            className="px-4 py-2 rounded border bg-gray-500 bg-opacity-50 "
-            placeholder="Message"
-          ></textarea>
-          <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-400 text-slate-50 rounded-lg py-3 px-5 mx-auto my-3">
+          <label className="text-white" htmlFor="message">
+            Message:
+          </label>
+          <textarea className="px-4 py-2 rounded border bg-slate-500 bg-opacity-0 "></textarea>
+          <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-600 text-slate-50 rounded-lg py-3 px-5 mx-auto my-3">
             Submit
           </button>
         </form>
@@ -71,9 +63,6 @@ function Contact() {
             <p className="text-gray-300">FakeEmail@gmail.com</p>
           </div>
         </div>
-      </div>
-      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
-        <Footer />
       </div>
     </div>
   )

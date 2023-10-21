@@ -9,13 +9,11 @@ function Intro() {
         <p className="pt-10 cursive text-3xl md:text-5xl">
           Welcome to Burger Dash, where every bite is a burger adventure.
         </p>
+        <button className="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-xl m-[5%]">
+          Book Now
+        </button>
       </div>
-      <img className="h-[90%]" src="/images/intro.png" alt="" />
-
-      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
-        <Footer />
-      </div>
-
+      <img className="lg:h-[90%]" src="/images/intro.png" alt="" />
       <WavyBackground />
     </div>
   )
