@@ -1,16 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getBookingList } from '../apis/booking'
-import { useState, useEffect } from 'react'
 
 function BookingList() {
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
-
   const {
     data: bookings,
     isLoading,
@@ -37,12 +28,12 @@ function BookingList() {
     return (
       <div
         className="pt-20 text-center  bg-cover h-screen"
-        style={{ backgroundImage: 'url("/images/reserved.webp")' }}
+        style={{ backgroundImage: 'url("/images/bg-img.jpg")' }}
       >
-        <h1 className="text-2xl text-white p-20 md:text-4xl lg:text-5xl mx-auto xl:w-[50%] xl:text-6xl">
+        <h1 className="text-2xl text-slate-700 p-20 md:text-4xl lg:text-5xl mx-auto xl:w-[50%] xl:text-6xl">
           WE CURRENTLY HAVE NO RESERVATIONS BOOKED FOR THE NEXT 7 DAYS
         </h1>
-        <p className="text-white text-lg px-16 lg:text-xl lg:w-[40%] mx-auto">
+        <p className="text-slate-700 text-lg px-16 lg:text-xl lg:w-[40%] mx-auto">
           For any special inquiries or to discuss private events, please
           don&apos;t hesitate to contact our reservation team.
         </p>
@@ -52,15 +43,13 @@ function BookingList() {
 
   return (
     <div
-      className={`overflow-x-auto pt-20 bg-cover h-screen text-white ${
-        isVisible ? 'opacity-100' : 'opacity-30'
-      }`}
-      style={{ backgroundImage: 'url("/images/reserved.jpg")' }}
+      className={`overflow-x-auto pt-20 bg-cover h-screen text-slat-700 `}
+      style={{ backgroundImage: 'url("/images/bg-img.jpg")' }}
     >
-      <h2 className="text-white text-center text-lg md:text-2xl lg:text-4xl p-4 cursive">
+      <h2 className="text-slate-700 text-center text-3xl  md:text-4xl lg:text-6xl p-4 cursive">
         Reservation List For The Next 7 Days
       </h2>
-      <table className="w-[80%] table-fixed mx-auto bg-transparent bg-opacity-50">
+      <table className="w-[80%] table-fixed mx-auto bg-transparent bg-opacity-50 mt-10">
         <thead className="">
           <tr className=" md:text-xl">
             <th className="w-1/4 p-2">Date</th>
