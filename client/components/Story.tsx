@@ -3,11 +3,7 @@ import { useRef } from 'react'
 function Story() {
   return (
     <div className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] h-screen`}>
-      <img
-        className="md:w-[50%] md:mx-auto hidden lg:block"
-        src="/images/story.png"
-        alt=""
-      />
+      <img className="md:w-[50%] md:mx-auto " src="/images/story.png" alt="" />
       <div className="pt-[10%] xl:pt-[0] m-[5%]">
         <p className="text-center text-xl md:text-2xl lg:text-sm xl:text-3xl text-white leading-relaxed">
           In 1957, nestled in the heart of Queenstown, a small burger place was

@@ -13,7 +13,11 @@ function Intro() {
           Book Now
         </button>
       </div>
-      <img className="" src="/images/intro.png" alt="" />
+      <img
+        className=" mx-auto h-[50%] lg:h-[90%]"
+        src="/images/intro.png"
+        alt=""
+      />
       <WavyBackground />
     </div>
   )
