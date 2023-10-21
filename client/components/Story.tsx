@@ -22,7 +22,7 @@ function Story() {
         </p>
       </div>
       <img
-        className="md:w-[50%] md:mx-auto lg:hidden"
+        className="md:w-[50%] md:mx-auto lg:hidden pt-10"
         src="/images/story.png"
         alt=""
       />
