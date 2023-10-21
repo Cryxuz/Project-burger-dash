@@ -4,7 +4,7 @@ function Story() {
   return (
     <div className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] h-screen`}>
       <img
-        className="md:w-[50%] md:mx-auto hidden md:block"
+        className="md:w-[50%] md:mx-auto hidden lg:block"
         src="/images/story.png"
         alt=""
       />
@@ -22,7 +22,7 @@ function Story() {
         </p>
       </div>
       <img
-        className="md:w-[50%] md:mx-auto md:hidden"
+        className="md:w-[50%] md:mx-auto lg:hidden"
         src="/images/story.png"
         alt=""
       />
