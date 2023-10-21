@@ -14,7 +14,7 @@ function Intro() {
         </button>
       </div>
       <img
-        className=" mx-auto h-[50%] lg:h-[90%]"
+        className=" mx-auto h-[75%] lg:h-[90%]"
         src="/images/intro.png"
         alt=""
       />
