@@ -13,7 +13,7 @@ function Intro() {
           Book Now
         </button>
       </div>
-      <img className="lg:h-[90%]" src="/images/intro.png" alt="" />
+      <img className="" src="/images/intro.png" alt="" />
       <WavyBackground />
     </div>
   )
