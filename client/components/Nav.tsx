@@ -13,25 +13,27 @@ function Nav() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   return (
-    <div className="fixed w-full bg-inherit">
+    <div className="w-full bg-inherit">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between md:justify-center h-16">
           {/* Nav links */}
           <div className="hidden md:block">
-            <ul className="ml-10 flex items-center space-x-4">
+            <ul className="ml-10 flex items-center space-x-4 sans-serif text-3xl gap-5 text-slate-800 ">
               <RouterLink to="/" onClick={handleClick}>
-                <button>Home</button>
+                <button className="hover:underline">Home</button>
               </RouterLink>
               <ScrollLink to="story" spy={true} smooth={true} duration={500}>
-                <button>Story</button>
+                <button className="hover:underline">Story</button>
               </ScrollLink>
               <ScrollLink to="menu" spy={true} smooth={true} duration={500}>
-                <button>Menu</button>
+                <button className="hover:underline">Menu</button>
               </ScrollLink>
               <ScrollLink to="contact" spy={true} smooth={true} duration={500}>
-                <button>Contact</button>
+                <button className="hover:underline">Contact</button>
               </ScrollLink>
-              <RouterLink to="/bookings">Booking</RouterLink>
+              <RouterLink to="/bookings">
+                <button className="hover:underline">Booking</button>
+              </RouterLink>
             </ul>
           </div>
           {/* Hamburger menu */}
@@ -51,7 +53,7 @@ function Nav() {
       {open ? (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-            <RouterLink to="/" onClick={handleClick}>
+            <RouterLink className="" to="/" onClick={handleClick}>
               Home
             </RouterLink>
             <ScrollLink to="story" spy={true} smooth={true} duration={500}>

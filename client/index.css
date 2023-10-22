@@ -11,6 +11,10 @@
   font-family: 'Allura', cursive;
 }
 
+.sans-serif {
+  font-family: 'Montaga', serif;
+}
+
 body {
   background-color: rgb(168, 168, 168);
 }

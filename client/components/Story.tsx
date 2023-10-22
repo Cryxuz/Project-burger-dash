@@ -10,7 +10,7 @@ function Story() {
         alt=""
       />
       <div className="pt-[10%] xl:pt-[0] m-[5%]">
-        <p className="text-center text-xl md:text-2xl lg:text-sm xl:text-3xl text-white leading-relaxed">
+        <p className="text-center text-xl md:text-2xl lg:text-sm xl:text-3xl text-white leading-relaxed sans-serif">
           In 1957, nestled in the heart of Queenstown, a small burger place was
           born. It was named "Burger Dash," and it quickly became a local
           legend. With its secret family recipe, the juiciest patties, and a
