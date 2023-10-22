@@ -18,7 +18,7 @@ const CarouselPage = () => {
         </p>
         <div className="flex justify-center items-center gap-2">
           <a
-            href="https://drive.google.com/file/d/1udEgTBX8DTwrRAVZO0WDeOr6B3maqEp6/view?usp=sharing"
+            href="https://drive.google.com/file/d/1IpFermZwsXtJlql0cBVK1c6esxMF1dk3/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
