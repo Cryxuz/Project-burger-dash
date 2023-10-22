@@ -3,36 +3,15 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link as RouterLink } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll'
 
-const navLinks = [
-  {
-    title: 'Home',
-    link: '/',
-  },
-  {
-    title: 'Menu',
-    link: '/menu',
-  },
-  {
-    title: 'Booking',
-    link: '/bookings',
-  },
-  {
-    title: 'Story',
-    link: '/story',
-  },
-  {
-    title: 'Contact',
-    link: '/contact',
-  },
-]
-
 function Nav() {
   const [open, setOpen] = useState(false)
 
   const handleMenu = () => {
     setOpen((prev) => !prev)
   }
-
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <div className="fixed w-full bg-inherit">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,9 +19,9 @@ function Nav() {
           {/* Nav links */}
           <div className="hidden md:block">
             <ul className="ml-10 flex items-center space-x-4">
-              <ScrollLink to="home" spy={true} smooth={true} duration={500}>
+              <RouterLink to="/" onClick={handleClick}>
                 Home
-              </ScrollLink>
+              </RouterLink>
               <ScrollLink to="story" spy={true} smooth={true} duration={500}>
                 Story
               </ScrollLink>
