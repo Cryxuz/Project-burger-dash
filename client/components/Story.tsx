@@ -5,7 +5,7 @@ function Story() {
       className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] h-screen`}
     >
       <img
-        className="md:w-[50%] md:mx-auto hidden lg:block"
+        className="md:w-[50%] md:h-[60%] md:mx-auto hidden lg:block"
         src="/images/story.png"
         alt=""
       />
