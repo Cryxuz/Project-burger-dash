@@ -3,7 +3,10 @@ import WavyBackground from './WavyBackground'
 
 function Intro() {
   return (
-    <div className=" h-screen lg:flex items-center pt-[35%] md:pt-16 lg:pt-0">
+    <div
+      id="home"
+      className="h-screen lg:flex items-center pt-[35%] md:pt-16 lg:pt-0"
+    >
       <div className="text-center text-slate-800 lg:w-1/2  lg:pl-[8%]">
         <h1 className="cursive text-7xl md:text-9xl">Burger Dash</h1>
         <p className="pt-10 cursive text-3xl md:text-5xl">

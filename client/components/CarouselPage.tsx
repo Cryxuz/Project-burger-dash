@@ -4,7 +4,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const CarouselPage = () => {
   return (
-    <div className={`pt-[5%] w-[60%] lg:flex m-auto gap-[20%] items-center`}>
+    <div
+      id="menu"
+      className={`pt-[5%] w-[60%] lg:flex m-auto gap-[20%] items-center`}
+    >
       <div className="">
         <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
           Explore Our Delicious Cuisine

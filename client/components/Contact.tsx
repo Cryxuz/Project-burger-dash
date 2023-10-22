@@ -2,7 +2,7 @@ import Footer from './Footer'
 
 function Contact() {
   return (
-    <div className={` py-[5%]  `}>
+    <div id="contact" className={` py-[5%]  `}>
       <div className="w-[90%] md:w-[50%] p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 ">
         <h2 className="text-white text-2xl md:text-3xl ">Contact Us</h2>
         <br />

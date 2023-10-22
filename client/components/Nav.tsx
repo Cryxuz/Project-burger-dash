@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 
 const navLinks = [
   {
@@ -38,17 +39,21 @@ function Nav() {
         <div className="flex items-center justify-between md:justify-center h-16">
           {/* Nav links */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
-              {navLinks.map((link, index) => (
-                <Link
-                  className="text-white transition-all duration-500 hover:underline hover:text-gray-300 px-3 py-2 rounded-md font-medium text-2xl"
-                  key={index}
-                  to={link.link}
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
+            <ul className="ml-10 flex items-center space-x-4">
+              <ScrollLink to="home" spy={true} smooth={true} duration={500}>
+                Home
+              </ScrollLink>
+              <ScrollLink to="story" spy={true} smooth={true} duration={500}>
+                Story
+              </ScrollLink>
+              <ScrollLink to="menu" spy={true} smooth={true} duration={500}>
+                Menu
+              </ScrollLink>
+              <ScrollLink to="contact" spy={true} smooth={true} duration={500}>
+                Contact
+              </ScrollLink>
+              <RouterLink to="/bookings">Booking</RouterLink>
+            </ul>
           </div>
           {/* Hamburger menu */}
           <div className="-mr-2 flex md:hidden">
@@ -68,13 +73,13 @@ function Nav() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link, index) => (
-              <Link
+              <RouterLink
                 className="text-gray-300 hover:bg-gray-500 hover:bg-opacity-30 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 key={index}
                 to={link.link}
               >
                 {link.title}
-              </Link>
+              </RouterLink>
             ))}
           </div>
         </div>
