@@ -10,11 +10,10 @@ const CarouselPage = () => {
     >
       <div className="">
         <p className="cursive text-center m-[4%] text-5xl md:text-4xl xl:text-8xl text-white">
-          Explore Our Delicious Cuisine
+          Burger Paradise Awaits
         </p>
         <p className=" xl:text-2xl text-center my-5 md:my-5 text-md text-white ">
-          "Laughter is brightest in the place where the food is." – Irish
-          Proverb
+          "Life is better with a burger in hand." - Unknown
         </p>
         <div className="flex justify-center items-center gap-2">
           <a
