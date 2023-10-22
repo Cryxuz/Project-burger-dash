@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getBookingList } from '../apis/booking'
+import { Link } from 'react-router-dom'
 
 function BookingList() {
   const {
@@ -49,6 +50,13 @@ function BookingList() {
       <h2 className="text-slate-700 text-center text-3xl  md:text-4xl lg:text-6xl p-4 cursive">
         Reservation List For The Next 7 Days
       </h2>
+      <div className="flex items-center justify-center">
+        <Link to="/">
+          <button className="bg-gray-700 m-5 text-white py-2 px-4 rounded-lg hover-bg-slate-400 border-[2px]">
+            Main Page
+          </button>
+        </Link>
+      </div>
       <table className="w-[80%] table-fixed mx-auto bg-transparent bg-opacity-50 mt-10">
         <thead className="">
           <tr className=" md:text-xl">

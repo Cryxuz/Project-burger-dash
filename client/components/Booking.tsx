@@ -134,6 +134,11 @@ function Booking() {
           </button>
         </form>
         <div className="text-center">
+          <Link to="/">
+            <button className="bg-gray-700 m-5 text-white py-2 px-4 rounded-lg hover-bg-slate-400 border-[2px]">
+              Main Page
+            </button>
+          </Link>
           <Link to="/booking-list">
             <button className="bg-gray-700 m-5 text-white py-2 px-4 rounded-lg hover-bg-slate-400 border-[2px]">
               View Reservation List

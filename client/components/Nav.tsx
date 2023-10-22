@@ -20,16 +20,16 @@ function Nav() {
           <div className="hidden md:block">
             <ul className="ml-10 flex items-center space-x-4">
               <RouterLink to="/" onClick={handleClick}>
-                Home
+                <button>Home</button>
               </RouterLink>
               <ScrollLink to="story" spy={true} smooth={true} duration={500}>
-                Story
+                <button>Story</button>
               </ScrollLink>
               <ScrollLink to="menu" spy={true} smooth={true} duration={500}>
-                Menu
+                <button>Menu</button>
               </ScrollLink>
               <ScrollLink to="contact" spy={true} smooth={true} duration={500}>
-                Contact
+                <button>Contact</button>
               </ScrollLink>
               <RouterLink to="/bookings">Booking</RouterLink>
             </ul>
