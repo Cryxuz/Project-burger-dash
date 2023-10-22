@@ -52,20 +52,22 @@ function Nav() {
       {/* Mobile menu */}
       {open ? (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col text-slate-800">
             <RouterLink className="" to="/" onClick={handleClick}>
-              Home
+              <button className="hover:underline">Home</button>
             </RouterLink>
             <ScrollLink to="story" spy={true} smooth={true} duration={500}>
-              Story
+              <button className="hover:underline"> Story</button>
             </ScrollLink>
             <ScrollLink to="menu" spy={true} smooth={true} duration={500}>
-              Menu
+              <button className="hover:underline">Menu</button>
             </ScrollLink>
             <ScrollLink to="contact" spy={true} smooth={true} duration={500}>
-              Contact
+              <button className="hover:underline">Contact</button>
             </ScrollLink>
-            <RouterLink to="/bookings">Booking</RouterLink>
+            <RouterLink to="/bookings">
+              <button className="hover:underline">Booking</button>
+            </RouterLink>
           </div>
         </div>
       ) : null}
