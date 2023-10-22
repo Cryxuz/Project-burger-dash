@@ -2,7 +2,7 @@ function Story() {
   return (
     <div
       id="story"
-      className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] h-screen`}
+      className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%]`}
     >
       <img
         className="md:w-[50%] md:h-[60%] md:mx-auto hidden lg:block"

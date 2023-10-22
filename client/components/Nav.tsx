@@ -50,16 +50,20 @@ function Nav() {
       {/* Mobile menu */}
       {open ? (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link, index) => (
-              <RouterLink
-                className="text-gray-300 hover:bg-gray-500 hover:bg-opacity-30 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                key={index}
-                to={link.link}
-              >
-                {link.title}
-              </RouterLink>
-            ))}
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+            <RouterLink to="/" onClick={handleClick}>
+              Home
+            </RouterLink>
+            <ScrollLink to="story" spy={true} smooth={true} duration={500}>
+              Story
+            </ScrollLink>
+            <ScrollLink to="menu" spy={true} smooth={true} duration={500}>
+              Menu
+            </ScrollLink>
+            <ScrollLink to="contact" spy={true} smooth={true} duration={500}>
+              Contact
+            </ScrollLink>
+            <RouterLink to="/bookings">Booking</RouterLink>
           </div>
         </div>
       ) : null}
