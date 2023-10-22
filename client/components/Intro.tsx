@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import WavyBackground from './WavyBackground'
 
@@ -12,16 +13,17 @@ function Intro() {
         <p className="pt-10 cursive text-3xl md:text-5xl">
           Welcome to Burger Dash, where every bite is a burger adventure.
         </p>
-        <button className="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-xl m-[5%]">
-          Book Now
-        </button>
+        <Link to="/bookings">
+          <button className="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-xl m-[5%]">
+            Book Now
+          </button>
+        </Link>
       </div>
       <img
         className=" mx-auto h-[75%] lg:h-[90%]"
         src="/images/intro.png"
         alt=""
       />
-      <WavyBackground />
     </div>
   )
 }
