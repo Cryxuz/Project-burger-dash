@@ -13,9 +13,9 @@ function Nav() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   return (
-    <div className="w-full bg-inherit">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between md:justify-center h-16">
+    <div className="w-full bg-inherit fixed">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between md:justify-center h-16 ">
           {/* Nav links */}
           <div className="hidden md:block">
             <ul className="ml-10 flex items-center space-x-4 sans-serif text-3xl gap-5 text-slate-800 ">
