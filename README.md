@@ -1,3 +1,10 @@
+# Burger Dash:
+
+- SERN stack.
+- More focused on saving booking data to database.
+- front-end with carousel.
+- Deployment - Netlify.
+
 # Boilerplate: Fullstack with Sass
 
 ## Setup
