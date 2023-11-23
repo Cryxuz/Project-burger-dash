@@ -17,8 +17,6 @@ function BookingList() {
   }
 
   const currentDate = new Date()
-  currentDate.setDate(currentDate.getDate() + 1)
-
   const nextWeek = new Date()
   nextWeek.setDate(nextWeek.getDate() + 7)
 

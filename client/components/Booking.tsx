@@ -152,10 +152,6 @@ function Booking() {
           </p>
         </div>
       </div>
-
-      <div className="flex items-end justify-end fixed bottom-0 right-0 left-0 pb-2 px-10">
-        <Footer />
-      </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@ function Story() {
   return (
     <div
       id="story"
-      className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%]`}
+      className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] items-center justify-center`}
     >
       <img
         className="md:w-[50%] md:h-[60%] md:mx-auto hidden lg:block"
@@ -25,7 +25,7 @@ function Story() {
       <img
         className="md:w-[50%] md:mx-auto lg:hidden pt-10"
         src="/images/story.png"
-        alt=""
+        alt="burger sketch"
       />
     </div>
   )
