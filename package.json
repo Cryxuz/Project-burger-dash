@@ -14,7 +14,7 @@
     "dev:client": "vite",
     "dev:server": "tsx watch server/index.ts",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build",
+    "build:client": "npx vite build",
     "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "knex": "knex --knexfile ./server/db/knexfile.js"
@@ -77,7 +77,7 @@
     "terser-webpack-plugin": "^5.3.9",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6",
-    "vite": "^4.4.9",
+    "vite": "^4.5.0",
     "vitest": "^0.34.1"
   },
   "prettier": {
