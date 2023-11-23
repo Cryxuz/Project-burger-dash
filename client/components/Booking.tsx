@@ -33,7 +33,8 @@ function Booking() {
     dates.push(nextDate.toDateString())
   }
 
-  const mutation = useMutation((formData) => addBookings(formData))
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mutation = useMutation((formData: any) => addBookings(formData))
 
   const [formData, setFormData] = useState({
     name: '',
@@ -54,7 +55,7 @@ function Booking() {
     mutation.mutate(formData)
   }
 
-  const [isVisible, setIsVisible] = useState(false)
+  const [, setIsVisible] = useState(false)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
