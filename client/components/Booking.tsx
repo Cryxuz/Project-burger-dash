@@ -25,6 +25,7 @@ function Booking() {
   ]
 
   const currentDate = new Date()
+  currentDate.setDate(currentDate.getDate() + 1)
   const dates = []
 
   for (let i = 0; i < 7; i++) {
