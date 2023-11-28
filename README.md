@@ -4,6 +4,7 @@
 - More focused on saving booking data to database.
 - front-end with carousel.
 - Deployment - Netlify.
+- URL: https://burgerdash.netlify.app/
 
 # Boilerplate: Fullstack with Sass
 
