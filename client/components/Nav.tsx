@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className="py-6">
-      <div className="text-slate-800 container mx-auto flex justify-center items-center gap-12 pt-2   text-2xl">
+      <div className="text-slate-800 container mx-auto flex justify-center items-center gap-24 pt-2   text-2xl">
         <a className="font-bold" href="#about">
           About
         </a>
