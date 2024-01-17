@@ -2,8 +2,11 @@ import Footer from './Footer'
 
 function Contact() {
   return (
-    <div id="contact" className={` py-[5%]  `}>
-      <div className="w-[90%] md:w-[50%] p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 ">
+    <div className={` py-[5%]  `}>
+      <div
+        id="contact"
+        className="w-[90%] md:w-[50%] p-[10%] md:p-[3%] pb-[5%] mt-[20%] md:mt-[10%] xl:mt-[5%] mx-auto rounded-xl bg-opacity-80 "
+      >
         <h2 className="text-white text-2xl md:text-3xl ">Contact Us</h2>
         <br />
         <p className="text-white">
@@ -38,11 +41,11 @@ function Contact() {
             Message:
           </label>
           <textarea className="px-4 py-2 rounded border bg-slate-500 bg-opacity-0 "></textarea>
-          <button className="bg-slate-500 bg-opacity-70 hover:bg-slate-600 text-slate-50 rounded-lg py-3 px-5 mx-auto my-3">
+          <button className=" bg-slate-500 bg-opacity-70 hover:bg-slate-600 text-slate-50 rounded-lg py-3 px-5 mx-auto my-6">
             Submit
           </button>
         </form>
-        <div className="xl:grid xl:grid-cols-3 items-center justify-center">
+        <div className="xl:grid xl:grid-cols-3 items-center justify-center mt-10">
           <div className="location text-center">
             <p className="text-xl my-[5%] text-white">Location</p>
             <p className="text-gray-300">

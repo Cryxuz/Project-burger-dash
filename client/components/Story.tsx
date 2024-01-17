@@ -1,7 +1,7 @@
 function Story() {
   return (
     <div
-      id="story"
+      id="about"
       className={`lg:flex px-[10%] gap-[5%]  pt-[15%] xl:pt-[5%] items-center justify-center`}
     >
       <img
@@ -17,9 +17,7 @@ function Story() {
           a timeless charm, Burger Dash served generations of happy customers.
           Today, it stands as a cherished part of Queenstown&apos;s history,
           where every bite is a bite of nostalgia and delicious tradition.
-          Today, as Burger Dash continues to delight locals and tourists alike,
-          it remains a symbol of Queenstown&apos;s enduring spirit and a
-          testament to the timeless appeal of a perfectly crafted burger.
+          Today, Burger Dash continues to delight locals and tourists alike.
         </p>
       </div>
       <img

@@ -1,21 +1,16 @@
-import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { useState } from 'react'
-
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
-
-  const handleMenu = () => {
-    setOpen((prev) => !prev)
-  }
-
   return (
     <nav className="py-6">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-black text-4xl font-semibold cursive">
-          <img className="inline pr-5" src="/images/logo.png" alt="" />
-          Burger Dash
-        </div>
+      <div className="text-slate-800 container mx-auto flex justify-center items-center gap-12 pt-2   text-2xl">
+        <a className="font-bold" href="#about">
+          About
+        </a>
+        <a className="font-bold" href="#menu">
+          Menu
+        </a>
+        <a className="font-bold" href="#contact">
+          Contact
+        </a>
       </div>
     </nav>
   )

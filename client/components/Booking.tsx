@@ -2,9 +2,25 @@ import { useMutation } from '@tanstack/react-query'
 import { addBookings } from '../apis/booking'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './Footer'
 
 function Booking() {
+  const [msg, setMsg] = useState('')
+
+  const handleClick = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      // Mutate the data and wait for the response
+      await mutation.mutateAsync(formData)
+
+      // If mutation is successful, set the success message
+      setMsg('Reservation successful')
+    } catch (error) {
+      // Handle error, if needed
+      console.error('Error submitting form:', error)
+    }
+  }
+
   const seats = []
   for (let i = 2; i <= 10; i++) {
     seats.push(i)
@@ -131,7 +147,11 @@ function Booking() {
               ))}
             </select>
           </label>
-          <button className="bg-gray-700 text-white p-2 rounded-lg hover-bg-slate-400 m-[3%] border-[2px]">
+          {msg && <p className="text-green-400 mb-4">{msg}</p>}
+          <button
+            onClick={handleClick}
+            className="bg-gray-700 text-white p-2 rounded-lg hover-bg-slate-400 m-[3%] border-[2px]"
+          >
             Submit
           </button>
         </form>
@@ -146,10 +166,6 @@ function Booking() {
               View Reservation List
             </button>
           </Link>
-          <p className="text-white text-center px-2 lg:text-lg">
-            Unfortunately, the reservation list is not available because Netlify
-            does not provide free database hosting.
-          </p>
         </div>
       </div>
     </div>
